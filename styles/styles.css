@@ -6,7 +6,7 @@
 }
 
 :root {
-  --blue-sky: #2ecbe9;
+  --main-color: #6b8e85; --accent-color: #ffffff; --hover-color: #16a085;
 }
 
 html,
@@ -139,7 +139,7 @@ body {
 .contact-link {
   cursor: pointer;
   position: relative;
-  color: black;
+  color: rgb(187, 147, 147);
   bottom: 0;
   transition: bottom 0.15s;
 }
@@ -153,7 +153,7 @@ body {
 a,
 #nav-btn {
   text-decoration: none;
-  color: black;
+  color: rgb(243, 233, 233);
 }
 
 a:visited {
@@ -162,11 +162,11 @@ a:visited {
 }
 a:hover {
   text-decoration: none;
-  color: black;
+  color: rgb(114, 82, 82);
 }
 a:focus {
   text-decoration: none;
-  color: black;
+  color: rgb(228, 205, 205);
 }
 a:hover,
 a:active {
@@ -207,9 +207,42 @@ a:active {
   }
 
   #self-introduce-p {
-    display: inline;
-    width: 100%;
+    display: inline-block;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid var(--accent-color);
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
   }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--accent-color); }
+}
+
+@media screen and (max-height: 700px) {
+  h1, h2, h3 {
+      font-size: smaller; /* Adjust font sizes */
+  }
+
+  .some-class {
+      margin: 10px; /* Adjust spacing */
+  }
+
+  .another-class {
+      display: block; /* Change layout if necessary */
+      width: 100%; /* Adjust width for smaller screens */
+  }
+
+  
+}
+
 
   .nav-bar {
     overflow: hidden;
@@ -243,4 +276,48 @@ a:active {
   .show-nav-bar {
     height: 100vh;
   }
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Gothic A1', sans-serif;
+    color: var(--accent-color);
 }
+
+body {
+    color: var(--accent-color);
+    background-color: var(--main-color);
+}
+
+
+.nav-link:hover {
+    color: var(--hover-color);
+    transition: color 0.3s ease;
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInUp {
+    animation: fadeInUp 1s ease-out;
+}
+
+
+.starry-background {
+    background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+    animation: moveStars 50s linear infinite;
+}
+
+@keyframes moveStars {
+    from { background-position: 0 0; }
+    to { background-position: -10000px 5000px; }
+}
+
