@@ -24,4 +24,8 @@ In this portfolio, you will find a collection of my projects that showcase my sk
 
 I'm always on the lookout for exciting opportunities and collaborations. If you have a project in mind or just want to say hi, feel free to reach out to me through the contact section. Let's create something amazing together!
 
-@ Generate from https://github.com/VuKhoa23/My-Portfolio
+#### &#169; Generate from https://github.com/VuKhoa23/My-Portfolio
+
+#### Connect me via: NhanHTSE171117@fpt.edu.vn  || bolicious123@gmail.com
+
+#### &#169; 2024 Volka
